@@ -1,0 +1,67 @@
+
+<div class="ngx-easy-pagination">
+  <div *ngIf="options.title.enable" class="card-header {{options.title.alignClass}}">{{options.title.text}}</div>
+  <div class="card-body">
+    <table>
+      <tr class="row">
+        <th *ngFor="let column of options.columns;" [ngClass]="column.class ? column.class + ' ' + column.columnAlign : 'col' + ' ' + column.columnAlign">{{column.name}}</th>
+      </tr>
+      <tr *ngFor="let item of paginationItems | keyvalue" class="row">
+        <td *ngFor="let column of options.columns" [ngClass]="column.class ? column.class + ' ' + column.columnAlign : 'col' + ' ' + column.columnAlign"  [dataTableColumnValue]="{ item: item.value, options: column}"></td>
+      </tr>
+    </table>
+  </div>
+  <div class="card-footer">
+    <nav class="d-flex {{options.navigation.alignClass}}">
+      <ul class="d-flex navigation-container justify-content-between">
+        <div>
+          <li *ngIf="pagination === 1; then thenPaginationBackBlock else elsePaginationBackBlock"></li>
+          <ng-template #thenPaginationBackBlock>
+            <button class="btn btn-pagination shadow-none disabled" disabled>{{options.navigation?.backButton?.text}}</button>
+          </ng-template>
+          <ng-template #elsePaginationBackBlock>
+            <button class="btn page-link btn-pagination shadow-none" (click)="ngOnPaginationBack()">{{options.navigation?.backButton?.text}}</button>
+          </ng-template>
+        </div>
+        <div class="pages">
+          <div *ngIf="isNavigationContainFirstPage || pagination === 1; else elseNavigationFirstPage">
+    
+          </div>
+          <ng-template #elseNavigationFirstPage>
+            <button class="btn page-link shadow-none" (click)="ngOnPaginationItem(1)">1</button>
+            <div class="pagination-dots">
+              ...
+            </div>
+          </ng-template>
+          <div *ngFor="let i of paginationListShow" class="page-item">
+            <div *ngIf="pagination == i; then thenPaginationItemBlock else elsePaginationItemBlock"></div>
+            <ng-template #thenPaginationItemBlock>
+              <button class="btn page-link shadow-none disabled" disabled>{{i}}</button>
+            </ng-template>
+            <ng-template #elsePaginationItemBlock>
+              <button type="button" class="btn page-link shadow-none" (click)="ngOnPaginationItem(i)">{{i}}</button>
+            </ng-template>
+          </div>
+          <div *ngIf="isNavigationContainLastPage || pagination === paginationMax; else elseNavigationLastPage">
+    
+          </div>
+          <ng-template #elseNavigationLastPage>
+            <div class="pagination-dots">
+              ...
+            </div>
+            <button class="btn page-link shadow-none" (click)="ngOnPaginationItem(paginationMax)">{{paginationMax}}</button>
+          </ng-template>
+        </div>
+        <div class="justify-content-end">
+          <li *ngIf="pagination === paginationMax; then thenPaginationNextBlock else elsePaginationNextBlock"></li>
+          <ng-template #thenPaginationNextBlock>
+            <button class="btn page-link btn-pagination shadow-none disabled" disabled>{{options.navigation?.nextButton?.text}}</button>
+          </ng-template>
+          <ng-template #elsePaginationNextBlock>
+            <button class="btn page-link btn-pagination shadow-none" (click)="ngOnPaginationNext()">{{options.navigation?.nextButton?.text}}</button>
+          </ng-template>
+        </div>
+      </ul>
+    </nav>
+  </div>
+</div>

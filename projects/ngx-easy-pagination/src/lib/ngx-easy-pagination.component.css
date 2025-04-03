@@ -1,0 +1,296 @@
+.ngx-easy-pagination {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  height: 100%;
+  color: #000;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+  border: 1px solid rgba(0, 0, 0, 0.175);
+  border-radius: 3px;
+  box-sizing: border-box;
+}
+.ngx-easy-pagination > hr {
+  margin-right: 0;
+  margin-left: 0;
+}
+
+.ngx-easy-pagination .card-body {
+  flex: 1 1 auto;
+  /* padding: var(--bs-card-spacer-y) var(--bs-card-spacer-x); */
+  color: #000;
+}
+
+.ngx-easy-pagination .card-text:last-child {
+  margin-bottom: 0;
+}
+
+.ngx-easy-pagination .card-header {
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 0.5rem 1rem;
+  margin-bottom: 0;
+  color: #000;
+  background-color: rgba(33, 37, 41, 0.03);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.175);
+}
+
+.ngx-easy-pagination .align-left {
+  text-align: left;
+}
+
+.ngx-easy-pagination .align-center {
+  text-align: center;
+}
+
+.ngx-easy-pagination .align-right {
+  text-align: right;
+}
+
+.ngx-easy-pagination .navigation-container {
+  width: 350px;
+}
+
+.ngx-easy-pagination .card-header:first-child {
+  border-radius: calc(0.375rem - 1px) calc(0.375rem - 1px) 0 0;
+}
+
+.ngx-easy-pagination .card-footer {
+  /* padding: 0.5rem 1rem; */
+  color: #000;
+  background-color: rgba(33, 37, 41, 0.03);
+  border-top: 1px solid rgba(0, 0, 0, 0.175);
+}
+
+.ngx-easy-pagination .card-footer:last-child {
+  border-radius: 0 0 calc(0.375rem - 1px) calc(0.375rem - 1px);
+}
+
+
+/****************************************************************/
+
+.ngx-easy-pagination table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.ngx-easy-pagination td, th {
+  text-align: left;
+  padding: 8px;
+}
+
+.ngx-easy-pagination tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+.ngx-easy-pagination .row {
+  display: flex;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+}
+
+.ngx-easy-pagination .row > * {
+  flex-shrink: 0;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.ngx-easy-pagination .col {
+  flex: 1 0 0%;
+}
+
+.ngx-easy-pagination .row-cols-auto > * {
+  flex: 0 0 auto;
+  width: auto;
+}
+
+.ngx-easy-pagination .row-cols-1 > * {
+  flex: 0 0 auto;
+  width: 100%;
+}
+
+.ngx-easy-pagination .row-cols-2 > * {
+  flex: 0 0 auto;
+  width: 50%;
+}
+
+.ngx-easy-pagination .row-cols-3 > * {
+  flex: 0 0 auto;
+  width: 33.33333333%;
+}
+
+.ngx-easy-pagination .row-cols-4 > * {
+  flex: 0 0 auto;
+  width: 25%;
+}
+
+.ngx-easy-pagination .row-cols-5 > * {
+  flex: 0 0 auto;
+  width: 20%;
+}
+
+.ngx-easy-pagination .row-cols-6 > * {
+  flex: 0 0 auto;
+  width: 16.66666667%;
+}
+
+.ngx-easy-pagination .col-auto {
+  flex: 0 0 auto;
+  width: auto;
+}
+
+.ngx-easy-pagination .col-1 {
+  flex: 0 0 auto;
+  width: 8.33333333%;
+}
+
+.ngx-easy-pagination .col-2 {
+  flex: 0 0 auto;
+  width: 16.66666667%;
+}
+
+.ngx-easy-pagination .col-3 {
+  flex: 0 0 auto;
+  width: 25%;
+}
+
+.ngx-easy-pagination .col-4 {
+  flex: 0 0 auto;
+  width: 33.33333333%;
+}
+
+.ngx-easy-pagination .col-5 {
+  flex: 0 0 auto;
+  width: 41.66666667%;
+}
+
+.ngx-easy-pagination .col-6 {
+  flex: 0 0 auto;
+  width: 50%;
+}
+
+.ngx-easy-pagination .col-7 {
+  flex: 0 0 auto;
+  width: 58.33333333%;
+}
+
+.ngx-easy-pagination .col-8 {
+  flex: 0 0 auto;
+  width: 66.66666667%;
+}
+
+.ngx-easy-pagination .col-9 {
+  flex: 0 0 auto;
+  width: 75%;
+}
+
+.ngx-easy-pagination .col-10 {
+  flex: 0 0 auto;
+  width: 83.33333333%;
+}
+
+.ngx-easy-pagination .col-11 {
+  flex: 0 0 auto;
+  width: 91.66666667%;
+}
+
+.ngx-easy-pagination .col-12 {
+  flex: 0 0 auto;
+  width: 100%;
+}
+
+
+.ngx-easy-pagination .d-flex {
+  display: flex !important;
+}
+
+.ngx-easy-pagination .pages {
+  display: flex;
+  gap: 1px;
+}
+
+.ngx-easy-pagination .justify-content-start {
+  justify-content: flex-start !important;
+}
+
+.ngx-easy-pagination .justify-content-end {
+  justify-content: flex-end !important;
+}
+
+.ngx-easy-pagination .justify-content-center {
+  justify-content: center !important;
+}
+
+.ngx-easy-pagination .justify-content-between {
+  justify-content: space-between !important;
+}
+
+.ngx-easy-pagination .pagination {
+  --bs-pagination-padding-x: 0.75rem;
+  --bs-pagination-padding-y: 0.375rem;
+  --bs-pagination-font-size: 1rem;
+  --bs-pagination-color: var(--bs-link-color);
+  --bs-pagination-bg: var(--bs-body-bg);
+  --bs-pagination-border-width: var(--bs-border-width);
+  --bs-pagination-border-color: var(--bs-border-color);
+  --bs-pagination-border-radius: var(--bs-border-radius);
+  --bs-pagination-hover-color: var(--bs-link-hover-color);
+  --bs-pagination-hover-bg: var(--bs-tertiary-bg);
+  --bs-pagination-hover-border-color: var(--bs-border-color);
+  --bs-pagination-focus-color: var(--bs-link-hover-color);
+  --bs-pagination-focus-bg: var(--bs-secondary-bg);
+  --bs-pagination-focus-box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+  --bs-pagination-active-color: #fff;
+  --bs-pagination-active-bg: #0d6efd;
+  --bs-pagination-active-border-color: #0d6efd;
+  --bs-pagination-disabled-color: var(--bs-secondary-color);
+  --bs-pagination-disabled-bg: var(--bs-secondary-bg);
+  --bs-pagination-disabled-border-color: var(--bs-border-color);
+  display: flex;
+  padding-left: 0;
+  list-style: none;
+}
+
+.ngx-easy-pagination .pagination-dots {
+  display: flex;
+  align-items: flex-end;
+  height: 100%;
+  font-size: 18px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+
+.ngx-easy-pagination .btn {
+  display: inline-block;
+  padding: 5px 10px;
+  font-size: 0.8rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #000;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  border: 1px solid rgba(0, 0, 0, 0.175);
+  border-radius: 3px;
+  background-color:#fff;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.ngx-easy-pagination .btn:hover {
+  background-color:#c0c0c0;
+}
+
+.ngx-easy-pagination .btn:disabled {
+  color: #000;
+  pointer-events: none;
+  background-color: #6c757d;
+  border-color: #6c757d;
+  opacity: 0.65;
+}
